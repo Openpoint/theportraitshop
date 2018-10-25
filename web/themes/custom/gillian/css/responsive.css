@@ -1,0 +1,106 @@
+@media screen and (max-width: 960px) {
+
+}
+@media screen and (max-width: 800px) {
+	.example{
+		flex-direction: column;
+		min-width:auto;
+		width:100vw!important;
+		flex:1;
+		margin:0;
+		margin-bottom:30px;
+		padding:10px;
+		align-items:center;
+		
+	}
+	.example .portrait{
+		z-index:2;
+	}
+	.example .inner{
+		margin:0 10px;
+		border-radius:5px;
+		width:100%;
+		box-sizing: border-box;
+		position:relative;
+		bottom:5px;
+		text-align:center;
+		padding-bottom:30px;
+	}
+	.example .images{
+		flex-direction: column;
+		align-items: center;
+	}
+	.example .images .slideShow{
+		margin:0;
+		margin-bottom:10px;
+	}
+	#header{
+		height:auto;
+		padding:10px;
+	}
+	#header .menu{
+		font-size:.7em;
+	}
+	#login{
+		display:none;
+	}
+	#block-logo{
+		margin:8px 0;
+		margin-bottom:12px;
+		position:static;
+		justify-content: center;
+	}
+	.view-about-the-artist .view-content > div{
+		flex-direction:column;
+		align-items:center;
+	}
+	.view-about-the-artist h2 {
+		text-align:center;
+	}
+}
+@media screen and (max-width: 600px) {
+	.section .split::before,.section .split::after{
+		display:block;
+		margin:10px auto;
+	}
+	.portrait{
+		padding:5px;
+	}
+	#frontHeader{
+		margin-top:30px;
+		margin-left:auto;
+		margin-right:auto;
+		width:200px;
+		font-size:.7em;
+	}
+	#frontHeader h2{
+		margin-top:10px;
+		position:static;
+	}
+
+	#footer .view-content > div{
+		font-size:.8em;
+		flex-direction:column;
+	}
+	.blurb .view-content > div{
+		margin-right:10px;
+		margin-left:10px;		
+		line-height:1.5em;
+	}
+	.blurb h2{
+		text-align:center;
+	}
+	#pagetitle{
+		font-size:.5em;
+	}
+	.example .inner{
+		line-height:1.5em;
+	}
+	.example .images img{
+		height:80px;
+	}
+}
+
+@media screen and (max-width: 600px), (max-height:600px){
+
+}

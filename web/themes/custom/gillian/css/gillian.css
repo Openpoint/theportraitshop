@@ -1,0 +1,434 @@
+:root {
+    --col1:#C0BBB3;
+    --col2:#E0C66C;
+    --col3:#C7912B;
+    --col4:#2E919C;
+	--col5:#005464;
+	--minWidth:900px;
+}
+
+body{
+	font-family:roboto,sans-serif;
+	width:100%;
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+	box-sizing: border-box;
+	overflow-x:hidden;
+}
+.dialog-off-canvas-main-canvas{
+	flex:1;
+	position:relative;
+}
+#outer-container{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	min-height:100%;
+	color:var(--col5);
+}
+main {
+	padding-bottom:50px;
+}
+main, .blurb{
+	display:flex;
+	justify-content:center;
+}
+
+#pagetitle{
+	text-align:center;
+	margin:40px 8px;
+	font-size:0.85em;
+}
+
+/*------------------------------------------------------------------- Header*/
+#header{
+	height:60px;
+	background:white;
+	z-index:10;
+	width:100%;
+	display:flex;
+	align-items:center;
+	position:sticky;
+	top:0;
+	border-bottom:1px solid var(--col4);
+	box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+	box-sizing: border-box;
+}
+.path-frontpage #header{
+	position:relative;
+}
+#header .region-header, #header nav{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+#header .menu {
+	width:100%;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:0!important;
+	margin:0!important;
+	box-sizing:border-box;
+	color:var(--col5);
+}
+#header .menu a{
+	padding:10px;
+	font-weight:200;
+	font-size:1.2em;
+}
+#header .menu a, #login, #block-logo a {
+	color:var(--col5);
+	text-decoration:none;
+}
+#login{
+	opacity:0.3;
+	position:absolute;
+	right:8px;
+	z-index:10;
+}
+#block-logo{
+	position:absolute;
+	left:8px;
+	height:100%;
+	top:0;
+	display:flex;
+	align-items:center;
+	z-index:10;
+	font-size:1.2em;
+}
+.head.one{
+	font-size:.8em;
+}
+.head.two{
+	text-transform:uppercase;
+}
+
+/*------------------------------------------------------------------- End Header*/
+
+/*------------------------------------------------------------------- Footer*/
+#footer{
+	height:150px;
+	background:var(--col2);
+	box-shadow:inset 2px 2px 5px rgba(0,0,0,0.3);
+	position:relative;
+}
+#footer .view-content > div{
+	height:120px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+#footer .view-content a{
+	color:var(--col5);
+	text-decoration:none;
+	font-weight:400;
+	padding:10px;
+	font-size:1.2em;
+}
+#footer .view-content a svg{
+	margin-right:5px;
+}
+#openpoint {
+	position:absolute;
+	width:100%;
+	bottom:25px;
+	text-align:center;
+	font-size:.85em;
+}
+#openpoint a{
+	text-decoration:none;
+	color:var(--col5);
+	border-bottom:1px solid var(--col5);
+}
+/*------------------------------------------------------------------- End Footer*/
+
+/*------------------------------------------------------------------- Front Page*/
+#frontHeader{
+	margin:50px 10px;
+	margin-bottom:0;
+	text-align:center;
+	color:var(--col5);
+	
+}
+#frontHeader h1, #pagetitle h1{
+	font-size:3.5em;
+	
+}
+#frontHeader h2{
+	margin-top:.2em;
+	font-size:1.3em;
+	position:relative;
+	right:20px;
+}
+#frontHeader .two, #pagetitle h1{
+	color:var(--col3);
+	text-shadow: 2px 2px 1px rgba(0,0,0,0.8);
+}
+#frontHeader .three{
+	text-transform:uppercase;	 
+}
+.portraitsFront .view-content{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:50px 10px;
+	max-width:100vw;
+}
+.portraitsFront .portrait img{
+	max-width:100%;
+}
+#action {
+	display:flex;
+	justify-content:center;
+	margin-top:20px;
+}
+.blurb li, .section li{
+	position:relative;
+}
+.blurb li::before, .section li::before {
+	content: ""; 
+	background: var(--col4);
+	position:absolute; 
+	width: .5em;
+	height:.5em;
+	border-radius:.5em;
+	left: -1em;
+	top:.25em;
+}
+/*------------------------------------------------------------------- End Front Page*/
+
+/*------------------------------------------------------------------- Blurbs*/
+.blurb{
+	font-family:opensans,sans-serif;
+	font-weight:400;
+}
+.blurb .view-content > div{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.blurb h2{
+	font-family:merriweather,serif;
+	font-size:1.2em;
+	font-weight:600;
+	margin-bottom:20px;
+}
+.blurb h3{
+	font-weight:600;
+	margin:10px 0;
+}
+.blurb li {
+	margin:1em 0;
+}
+/*------------------------------------------------------------------- End Blurbs*/
+
+/*------------------------------------------------------------------- Elements*/
+.divider{
+	width:100%;
+	height:10px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:30px 0;
+}
+.divider .dash{
+	width:80px;
+	height:3px;
+	border-radius:3px;
+	background:var(--col4);
+	box-shadow:2px 2px 2px rgba(0,0,0,0.6);
+}
+.divider .dot{
+	width:15px;
+	height:15px;
+	border-radius:15px;
+	margin:5px;
+	background:var(--col5);
+}
+._button a{
+	display:block;
+	background:var(--col4);
+	padding:12px 10px;
+	margin:10px;
+	color:white;
+	border-radius:5px;
+	box-shadow:2px 2px 2px rgba(0,0,0,0.6);
+	color:white;
+	text-decoration:none;
+}
+.portrait{
+	padding:10px;
+	position:relative;
+}
+.portrait img{
+	display:block;
+	max-height:300px;
+	width:auto;
+	box-shadow: 10px 10px 11px -8px rgba(0,0,0,0.33);
+}
+.editLink{
+	position:absolute;
+	display:block;
+	top:0;
+	left:0;
+	width:50px;
+	line-height:50px;
+	border-radius:50px;
+	background:black;
+	color:white;
+	text-decoration:none;
+	text-align:center;
+	z-index:10;
+}
+nav.pager a{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	border-radius:30px;
+	background:var(--col5);
+	color:white;
+	text-decoration:none;
+	font-weight:600;
+	font-size:1.5em;
+	line-height:1.15em;
+}
+/*------------------------------------------------------------------- End Elements*/
+
+/*------------------------------------------------------------------- Examples*/
+.example{
+	display:flex;
+	margin:50px 10px;
+	position:relative;
+	box-sizing: border-box;
+}
+.example p{
+	margin:1em 0;
+}
+.example .inner{
+	border:1px solid var(--col1);
+	box-shadow: 10px 10px 11px -8px rgba(0,0,0,0.33);
+	/*background:rgba(0,0,0,.03);*/
+	padding:20px 30px 10px 20px;
+	margin:5px 0;
+	border-radius:0 5px 5px 0;
+	display:flex;
+	flex-direction:column;
+	flex:1;
+}
+.example .portrait{
+	padding:0;
+}
+.example .portrait img{
+	width:300px;
+	height:auto;
+}
+.example .slideGroup img{
+	display:block;
+}
+.example h3{
+	font-size:1.5em;
+	font-family:merriweather;
+	font-weight:900;
+	color:var(--col4);
+}
+.example .images, .example .slideGroup .view-content{
+	display:flex;
+	flex-wrap:wrap;
+}
+.example .images .slideShow{
+	margin-right:10px;
+}
+.example .images {
+	flex:1;
+	align-items:flex-end;
+	
+}
+.exampleOrder{
+	position:absolute;
+	left:0;
+	top:-20px;
+}
+/*------------------------------------------------------------------- End Examples*/
+
+/*------------------------------------------------------------------- Sections*/
+.section{
+	line-height:1.2em;
+	margin:0 10px;
+	margin-bottom:50px;
+	max-width:700px;
+	line-height:1.5em;
+	flex:1;
+	box-sizing: border-box;
+	
+}
+.flex, .flex .view-content > div{
+	display:flex;
+}
+.column, .column .view-content > div{
+	flex-direction:column;
+}
+.center, .center .view-content > div{
+	align-items:center;
+	text-align:center;
+}
+.section .text{
+	padding:10px;
+}
+.section li {
+	margin-left:1em;
+}
+.section h2{
+	font-weight:600;
+	font-size:1.3em;
+	margin-bottom:1em;
+}
+.section ul, .section p, .section ol {
+	margin:1em 0;
+}
+.section .split{
+	text-align:center;
+	color:var(--col5);
+	font-size:1.5em;
+	margin-top:60px;
+	margin-bottom:0;
+	font-weight:900;
+	font-family:merriweather;
+}
+.section .split::before, .section .split::after{
+	content:"";
+	display:inline-block;
+	width:60px;
+	height:2px;
+	background:var(--col4);
+	margin:.25em .5em;
+	
+	box-shadow:2px 2px 2px rgba(0,0,0,0.3);
+}
+.section p.underline{
+	position:relative;
+}
+.section p.underline::after{
+	content:"";
+	display:block;
+	margin:0 auto;
+	margin-top:1em;
+	width:80px;
+	height:2px;
+	background:var(--col4);
+	opacity:0.3;
+	box-shadow:2px 2px 2px rgba(0,0,0,0.3);
+
+}
+.pricing p {
+	max-width:600px;
+}
+.section p a{
+	display:inline-block;
+	text-decoration:none;
+	color:var(--col4);
+	border-bottom:1px solid var(--col4);
+}
+/*------------------------------------------------------------------- End Sections*/

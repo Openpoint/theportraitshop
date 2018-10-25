@@ -1,0 +1,22 @@
+name: Gillian Jonker
+type: theme
+description: 'Custom theme for Gillian Jonker by Openpoint'
+core: 8.x
+libraries:
+  - gillian/global-styling
+  - gillian/font-awesome
+  
+base theme: classy
+
+regions:
+  header: Header
+  messages: Messages
+  title: Page Title
+  content: Content
+  sidebar_first: Sidebar First
+  sidebar_second: Sidebar Second
+  wall: Wall
+  footer: Footer
+
+ckeditor_stylesheets:
+  - css/ckEditor.css

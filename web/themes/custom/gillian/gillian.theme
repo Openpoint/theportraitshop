@@ -1,0 +1,5 @@
+<?php
+
+function gillian_preprocess_page(&$variables) {
+	
+}

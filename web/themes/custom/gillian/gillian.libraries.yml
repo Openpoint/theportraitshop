@@ -1,0 +1,22 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/reset.css: {}
+      css/gillian.css: {}
+      css/responsive.css: {}
+      css/lightbox.css: {}
+  js:
+    js/gillian.js: {}
+    js/lightbox.js: {}
+    
+  dependencies:
+    - core/jquery
+
+font-awesome:
+  version: 1.x
+  header: true
+  js:
+    js/fontawesome/js/fontawesome-all.min.js: {attributes:{defer:"defer"}}
+    js/fontawesome/js/fontawesome.min.js: {}
+
