@@ -50,6 +50,12 @@
 	background:black;
 	display:flex;
 }
+#overlay ._image.multi img{
+	border-right:1px solid white;
+}
+#overlay ._image.multi{
+	border-right:none;
+}
 #overlay ._image.active{
 	z-index:2;
 }

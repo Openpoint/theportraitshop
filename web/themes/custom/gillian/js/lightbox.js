@@ -45,6 +45,7 @@
 		let id = $('#overlay .active').attr('id') || '_image_one';
 		id = id === '_image_one'?'_image_two':'_image_one';
 		const width= Math.floor($(window).width()/100*90/slides[i][0].length);
+		$('._image').removeClass("multi");
 		$('#overlay .active').removeClass('active').css({opacity:0});
 		let html = "";
 		for(let url of slides[i][0]){
@@ -53,13 +54,20 @@
 		const activeDiv = $('#overlay #'+id);
 		activeDiv.html(html).addClass('active');
 		const activeImages = activeDiv.find('img');
+		if(activeImages.length > 1) activeDiv.addClass('multi');
+		let height;
+		let count = 0;
 		activeImages.each(function(){
 			$(this).on("load",function(){
-				const height = Math.round(this.width/$(this).attr("data-ratio"));
-				console.log(this.width,height);
-				this.style.maxHeight = height+"px";
+				count++;
+				const maxHeight = Math.round(this.width/$(this).attr("data-ratio"));
+				this.style.maxHeight = maxHeight+"px";
+				if(!height) height = this.height;
+				if (this.height < height) height = this.height;
+				if(count === activeImages.length){
+					$(activeImages).height(height);
+				}
 			})
-			
 		})
 		activeImages.first().on('load',function(){
 			activeDiv.css({opacity:1});
